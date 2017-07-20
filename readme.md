@@ -1,4 +1,6 @@
-# ASP.NET SignalR for Java and Android
+**Clone of https://github.com/SignalR/java-client. Removed Android support, but added Maven functionality.**
+
+# ASP.NET SignalR for Java
 ASP.NET SignalR is a new library for ASP.NET developers that makes it incredibly simple to add real-time web functionality to your applications. What is "real-time web" functionality? It's the ability to have your server-side code push content to the connected clients as it happens, in real-time.
 
 ## What can it be used for?
@@ -17,35 +19,6 @@ See the [documentation](http://asp.net/signalr)
 
 See the [contribution  guidelines](https://github.com/SignalR/SignalR/blob/master/CONTRIBUTING.md)
 
-## Building the source
-
-```
-git clone git@github.com:SignalR/java-client.git (or https if you use https)
-```
-
-Open Android Studio, click "Import Non-Android Studio Project" and select the cloned directory 
-
-Build the project.
-
-The signalr-client-sdk.jar will be generated inside the /signalr-client-sdk/build/libs folder
-
-The signalr-client-sdk-android.aar will be generated inside the /signalr-client-sdk-android/build/outputs/aar folder
-
-## Running the tests:
-	
-Run the signalr-client-tests project as a JUnit test.
-
-## Using the library in a Java application:
-
-Add the signalr-client-sdk.jar and gson library gradle dependencyto the project.
-
-## Using the library in an Android application:
-
-Add the signalr-client-sdk.jar, signalr-client-sdk-android.jar gson library as a gradle dependency to the project.
-
-In the code, before using the library, initialize the platform to use android-specific libraries and compatibility with older Android versions:
-	- Platform.loadPlatformComponent(new AndroidPlatformComponent());
-
-
-## Questions?
-The SignalR team hangs out in the [signalr](http://jabbr.net/#/rooms/signalr) room at on [JabbR](http://jabbr.net/).
+## Build with gradle
+Use `./gradlew jar` to (re-)create the JAR file in `signalr-client-sdk/build/libs`.  
+Probably update maven with the new version, too.
